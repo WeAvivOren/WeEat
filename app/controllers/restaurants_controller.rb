@@ -15,6 +15,8 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/new
   def new
     @restaurant = Restaurant.new
+    byebug
+    @cuisine = @restaurant.combo
   end
 
   # GET /restaurants/1/edit

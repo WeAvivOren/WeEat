@@ -17,8 +17,11 @@
   </div>
 
   <div class="field">
+
     <%= form.label :cuisine_id %>
-    <%= form.number_field :cuisine_id %>
+    <% debugger %>
+
+    <%= form.select :name , options_for_select(@cuisine.map(&:name))%>
   </div>
 
   <div class="field">
