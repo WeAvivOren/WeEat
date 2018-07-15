@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
   # GET /reviews.json
   def index
     @reviews = Review.all
+    render :json => @reviews
   end
 
   # GET /reviews/1
@@ -12,28 +13,30 @@ class ReviewsController < ApplicationController
   def show
   end
 
-  # GET /reviews/new
-  def new
-    @review = Review.new
-  end
+  # # GET /reviews/new
+  # def new
+  #   @review = Review.new
+  # end
 
-  # GET /reviews/1/edit
-  def edit
-  end
+  # # GET /reviews/1/edit
+  # def edit
+  # end
 
   # POST /reviews
   # POST /reviews.json
   def create
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    #@review = @restaurant.reviews.create(review_params)
     @review = Review.new(review_params)
+    @review.restaurant = @restaurant
+byebug
 
-    respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
-        format.json { render :show, status: :created, location: @review }
+       # format.html { redirect_to @review, notice: 'Review was successfully created.' }
+        render :json => @review
       else
-        format.html { render :new }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
-      end
+      #  format.html { render :new }
+        render :json => @review
     end
   end
 

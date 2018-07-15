@@ -19,9 +19,7 @@
   <div class="field">
 
     <%= form.label :cuisine_id %>
-    <% debugger %>
-
-    <%= form.select :name , options_for_select(@cuisine.map(&:name))%>
+    <%= form.number_field :cuisine_id %>
   </div>
 
   <div class="field">
@@ -45,6 +43,7 @@
   </div>
 
   <div class="actions">
+    <% debugger %>
     <%= form.submit %>
   </div>
 <% end %>
