@@ -1,10 +1,11 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_restaurant
 
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = @restaurant.reviews
     render :json => @reviews
   end
 
@@ -25,11 +26,8 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    #@review = @restaurant.reviews.create(review_params)
     @review = Review.new(review_params)
     @review.restaurant = @restaurant
-byebug
 
       if @review.save
        # format.html { redirect_to @review, notice: 'Review was successfully created.' }
@@ -74,4 +72,8 @@ byebug
     def review_params
       params.require(:review).permit(:name, :rating, :comment)
     end
+
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
 end

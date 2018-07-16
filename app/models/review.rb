@@ -15,4 +15,12 @@ class Review < ApplicationRecord
  # validates_exclusion_of :rating, in: 0..3, message: 'Rating must be 0-3'
 
   belongs_to :restaurant
+
+  after_create :update_restaurant_rating
+  after_destroy :update_restaurant_rating
+  after_update :update_restaurant_rating
+
+  def update_restaurant_rating
+    restaurant.update_rating
+  end
 end

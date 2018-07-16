@@ -26,4 +26,10 @@ class Restaurant < ApplicationRecord
     return cus
   end
 
+  def update_rating
+    byebug
+    self.rating = reviews.exists? ? reviews.average(:rating).round : 0
+    save!
+  end
+
 end
