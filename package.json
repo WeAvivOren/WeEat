@@ -2,10 +2,13 @@
   "name": "weeat",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^1.4.0",
     "@rails/webpacker": "3.5",
     "babel-preset-react": "^6.24.1",
+    "material-ui": "^0.20.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
