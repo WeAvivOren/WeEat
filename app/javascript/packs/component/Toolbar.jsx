@@ -1,4 +1,3 @@
-
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import FormControl from "@material-ui/core/es/FormControl/FormControl";
@@ -8,14 +7,22 @@ import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import axios from 'axios';
 import Checkbox from '@material-ui/core/Checkbox';
 
-
-
+const styles = theme => ({
+    button: {
+        display: 'block',
+        marginTop: theme.spacing.unit * 2,
+    },
+    formControl: {
+        margin: theme.spacing.unit,
+        minWidth: 120,
+    },
+});
 
 class Toolbar extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            cuisines : [
+            cuisines: [
                 {
                     "id": 4,
                     "name": "italic",
@@ -41,7 +48,7 @@ class Toolbar extends React.Component {
                     "updated_at": "2018-07-16T07:53:57.284Z"
                 }
             ],
-            restaurants : [
+            restaurants: [
                 {
                     "id": 2,
                     "name": "מרסלוס",
@@ -65,26 +72,30 @@ class Toolbar extends React.Component {
                     "updated_at": "2018-07-16T07:24:56.267Z"
                 }
             ],
-            filteredRestaurants:[ {"id": -1, "name": "empty"}],
+            filteredRestaurants: [{"id": -1, "name": "empty"}],
             has_10bis: false,
+            selected_value: -1,
         };
+        this.onTenBisChecked = this.onTenBisChecked.bind(this);
+        this.onCuisineSelected = this.onCuisineSelected.bind(this);
+
     }
 
-    onCuisineSelected = event =>  {
+    onCuisineSelected = event => {
         var cuisineId = event.target.value;
         console.log("cuisine id is = " + cuisineId);
-        this.setState({ selected_value: cuisineId });
+        this.setState({selected_value: cuisineId});
         const filteredRestaurants = this.state.restaurants.filter(restaurant => restaurant.cuisine_id === cuisineId);
         console.log(filteredRestaurants);
-        this.setState({ filteredRestaurants: filteredRestaurants });
+        this.setState({filteredRestaurants: filteredRestaurants});
     };
 
-    onTenBisChecked = event =>{
-        this.setState({ has_10bis: !this.state.has_10bis });
+    onTenBisChecked = event => {
+        this.setState({has_10bis: !this.state.has_10bis});
 
         const filteredRestaurants = this.state.restaurants.filter(restaurant => restaurant.accepts_10bis === true);
         console.log(filteredRestaurants);
-        this.setState({ filteredRestaurants: filteredRestaurants });
+        this.setState({filteredRestaurants: filteredRestaurants});
     };
 
     componentDidMount() {
@@ -93,31 +104,32 @@ class Toolbar extends React.Component {
     }
 
 
-    getRestaurants(){
+    getRestaurants() {
         fetch('/restaurants.json')
-            .then(response =>     {
+            .then(response => {
                 if (response.ok) {
                     return response.json();
                 } else {
                     throw new Error('Something went wrong ...');
                 }
-            }).then(data => this.setState({ restaurants: data}))
-            .catch(error => this.setState({ error, isLoading: false }));
+            }).then(data => this.setState({restaurants: data}))
+            .catch(error => this.setState({error, isLoading: false}));
     }
 
-    getCuisine(){
+    getCuisine() {
         fetch('/cuisines.json')
-            .then(response =>     {
+            .then(response => {
                 if (response.ok) {
                     return response.json();
                 } else {
                     throw new Error('Something went wrong ...');
                 }
-            }).then(data => this.setState({ cuisines: data}))
-            .catch(error => this.setState({ error, isLoading: false }));
+            }).then(data => this.setState({cuisines: data}))
+            .catch(error => this.setState({error, isLoading: false}));
     }
 
     render() {
+
         const cuisines = ( //loads the cuisines list into map, then for each item
             this.state.cuisines.map((cuisine) => {
                 return <MenuItem value={cuisine.id} key={cuisine.id} id={cuisine.id}>{cuisine.name}</MenuItem>
@@ -126,49 +138,76 @@ class Toolbar extends React.Component {
 
         const filteredRestaurants = ( //loads the filteredRestaurants list into map, then for each item
             this.state.filteredRestaurants.map((restaurant) => {
-                return <MenuItem value={restaurant.id} key={restaurant.id} id={restaurant.id}>{restaurant.name}</MenuItem>
+                return <MenuItem value={restaurant.id} key={restaurant.id}
+                                 id={restaurant.id}>{restaurant.name}</MenuItem>
             })
         );
 
         return (
             <MuiThemeProvider>
                 <div>
-                    <InputLabel htmlFor="cuisine-list">Select Cuisine</InputLabel>
-                    <Select
-                        value={this.state.selected_value}
-                        onChange={this.onCuisineSelected}
-                        className="cuisine-search-selected"
-                    >
-                        {cuisines} /* list of menu items */
-                    </Select>
+                    <div className="container">
+                        <div className="one">
+                        <div style={{marginLeft: '50px'}}>
+                            <FormControl className="cusine-formControl">
+                                <InputLabel htmlFor="restaurants-list"  width="200">Cuisine</InputLabel>
+                                <Select
+                                    width="200"
+                                    value={this.state.selected_value}
+                                    onChange={this.onCuisineSelected}
+                                    className="cuisine-search-selected"
+                                    defaultValue="-1"
+                                    useDefault={true}
+                                >
+                                    <MenuItem value="-1" key="-1" id="-1" disabled>Cuisine</MenuItem>
+                                    {cuisines} /* list of menu items */
+                                </Select>
+                            </FormControl>
+                        </div>
+                         </div>
 
-                    <InputLabel htmlFor="restaurants-list">Select Restaurant</InputLabel>
-                    <Select
-                        value={this.state.selected_value}
-                        onChange={this.onCuisineSelected}
-                        className="restaurants-search-selected"
-                    >
-                        {filteredRestaurants} /* list of menu items */
-                    </Select>
 
-                    <Checkbox
-                        className="tenBis-filter"
-                        label="Accepts 10Bis"
-                        checked={this.state.has_10bis}
-                        onChange={this.onTenBisChecked}
-                        labelStyle={{color: 'white'}}
-              //          iconStyle={{fill: 'rgb(233, 30, 99)'}}
-                        name="has_10bis"
-                    />
 
+                            <div style={{marginLeft: '50px'}}>
+
+                            <FormControl className="cusine-formControl">
+                                <InputLabel htmlFor="restaurants-list"  width="200">Restaurant</InputLabel>
+                                <Select
+                                    value={this.state.selected_value}
+                                    onChange={this.onCuisineSelected}
+                                    className="restaurants-search-selected"
+                                    fullWidth={true}
+
+                                >
+                                    <MenuItem value="-1"  width="200">
+                                        <em>Restaurant</em>
+                                    </MenuItem>
+                                    {filteredRestaurants} /* list of menu items */
+                                </Select>
+                            </FormControl>
+                        </div>
+
+                        <div className="three">
+                        <div style={{marginLeft: '50px'}}>
+
+                            <Checkbox
+                                className="tenBis-filter"
+                                label="Accepts 10Bis"
+                                checked={this.state.has_10bis}
+                                onChange={this.onTenBisChecked}
+                                labelstyle={{color: 'white'}}
+                                //          iconStyle={{fill: 'rgb(233, 30, 99)'}}
+                                name="has_10bis"
+                            />
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </MuiThemeProvider>
         );
     }
 
 }
-
-
 
 
 export default Toolbar;
