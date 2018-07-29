@@ -5,9 +5,7 @@ import InputLabel from "@material-ui/core/es/InputLabel/InputLabel";
 import Select from "@material-ui/core/es/Select/Select";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import Checkbox from '@material-ui/core/Checkbox';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
+import GridLayout from "./GridLayout";
 
 
 class Toolbar extends React.Component {
@@ -143,22 +141,9 @@ class Toolbar extends React.Component {
                         </div>
                     </div>
 
-                    <div className="grid-root">
-                        <GridList cellHeight={180} className="gridList">
-                            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                            </GridListTile>
-                            {this.state.filteredRestaurants.map(restaurant => (
-                                <GridListTile key={restaurant.id}>
-                                    <img src={restaurant.img} alt={restaurant.name} />
-                                    <GridListTileBar
-                                        title={restaurant.name}
-                                        subtitle={<span>by: {restaurant.address}</span>}
+                        <GridLayout filteredRestaurants = {this.state.filteredRestaurants}
+                    ></GridLayout>
 
-                                    />
-                                </GridListTile>
-                            ))}
-                        </GridList>
-                    </div>
                 </div>
             </MuiThemeProvider>
         );
