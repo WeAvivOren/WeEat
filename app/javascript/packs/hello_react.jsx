@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import Header from './component/Header.jsx';
 import Toolbar from "./component/Toolbar";
+import SimpleMap from "./component/SimpleMap";
 
 
 const Hello = props => (
@@ -24,22 +25,14 @@ Hello.propTypes = {
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
       <div>
-          <Header/>
-          <Toolbar/>
+          <Header>
+              <Toolbar/>
+              <div  style={{ marginTop: '10px' }}></div>
+              <SimpleMap>
+              </SimpleMap>
+          </Header>
+
       </div>,
     document.body.appendChild(document.createElement('div')),
   )
 })
-
-
-// class App extends React.Component {
-//     render() {
-//         return (
-//             <div>
-//                 <Header />
-//             </div>
-//         );
-//     }
-// }
-
-//export default App;

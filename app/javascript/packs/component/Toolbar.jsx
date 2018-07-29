@@ -4,81 +4,24 @@ import FormControl from "@material-ui/core/es/FormControl/FormControl";
 import InputLabel from "@material-ui/core/es/InputLabel/InputLabel";
 import Select from "@material-ui/core/es/Select/Select";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
-import axios from 'axios';
 import Checkbox from '@material-ui/core/Checkbox';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
 
-const styles = theme => ({
-    button: {
-        display: 'block',
-        marginTop: theme.spacing.unit * 2,
-    },
-    formControl: {
-        margin: theme.spacing.unit,
-        minWidth: 120,
-    },
-});
 
 class Toolbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cuisines: [
-                {
-                    "id": 4,
-                    "name": "italic",
-                    "created_at": "2018-07-15T14:37:13.507Z",
-                    "updated_at": "2018-07-15T14:37:13.507Z"
-                },
-                {
-                    "id": 5,
-                    "name": "american",
-                    "created_at": "2018-07-16T07:52:49.073Z",
-                    "updated_at": "2018-07-16T07:52:49.073Z"
-                },
-                {
-                    "id": 6,
-                    "name": "bbq",
-                    "created_at": "2018-07-16T07:53:29.425Z",
-                    "updated_at": "2018-07-16T07:53:29.425Z"
-                },
-                {
-                    "id": 7,
-                    "name": "bbq",
-                    "created_at": "2018-07-16T07:53:57.284Z",
-                    "updated_at": "2018-07-16T07:53:57.284Z"
-                }
-            ],
-            restaurants: [
-                {
-                    "id": 2,
-                    "name": "מרסלוס",
-                    "cuisine_id": 4,
-                    "rating": 2,
-                    "accepts_10bis": true,
-                    "address": "Marcelos, ריבל 7, Tel Aviv-Yafo",
-                    "max_delivery_time_minutes": 34,
-                    "created_at": "2018-07-15T15:05:17.588Z",
-                    "updated_at": "2018-07-15T15:05:17.588Z"
-                },
-                {
-                    "id": 3,
-                    "name": "cccc",
-                    "cuisine_id": 5,
-                    "rating": 3,
-                    "accepts_10bis": true,
-                    "address": "fff",
-                    "max_delivery_time_minutes": 55,
-                    "created_at": "2018-07-15T15:05:17.588Z",
-                    "updated_at": "2018-07-16T07:24:56.267Z"
-                }
-            ],
+            cuisines: [],
+            restaurants: [],
             filteredRestaurants: [{"id": -1, "name": "empty"}],
             has_10bis: false,
             selected_value: -1,
         };
         this.onTenBisChecked = this.onTenBisChecked.bind(this);
         this.onCuisineSelected = this.onCuisineSelected.bind(this);
-
     }
 
     onCuisineSelected = event => {
@@ -112,7 +55,7 @@ class Toolbar extends React.Component {
                 } else {
                     throw new Error('Something went wrong ...');
                 }
-            }).then(data => this.setState({restaurants: data}))
+            }).then(data => this.setState({restaurants: data, filteredRestaurants: data}))
             .catch(error => this.setState({error, isLoading: false}));
     }
 
@@ -129,7 +72,6 @@ class Toolbar extends React.Component {
     }
 
     render() {
-
         const cuisines = ( //loads the cuisines list into map, then for each item
             this.state.cuisines.map((cuisine) => {
                 return <MenuItem value={cuisine.id} key={cuisine.id} id={cuisine.id}>{cuisine.name}</MenuItem>
@@ -146,9 +88,11 @@ class Toolbar extends React.Component {
         return (
             <MuiThemeProvider>
                 <div>
+
                     <div className="container">
                         <div className="one">
                         <div style={{marginLeft: '50px'}}>
+
                             <FormControl className="cusine-formControl">
                                 <InputLabel htmlFor="restaurants-list"  width="200">Cuisine</InputLabel>
                                 <Select
@@ -156,8 +100,7 @@ class Toolbar extends React.Component {
                                     value={this.state.selected_value}
                                     onChange={this.onCuisineSelected}
                                     className="cuisine-search-selected"
-                                    defaultValue="-1"
-                                    useDefault={true}
+
                                 >
                                     <MenuItem value="-1" key="-1" id="-1" disabled>Cuisine</MenuItem>
                                     {cuisines} /* list of menu items */
@@ -166,10 +109,7 @@ class Toolbar extends React.Component {
                         </div>
                          </div>
 
-
-
                             <div style={{marginLeft: '50px'}}>
-
                             <FormControl className="cusine-formControl">
                                 <InputLabel htmlFor="restaurants-list"  width="200">Restaurant</InputLabel>
                                 <Select
@@ -201,6 +141,23 @@ class Toolbar extends React.Component {
                             />
                         </div>
                         </div>
+                    </div>
+
+                    <div className="grid-root">
+                        <GridList cellHeight={180} className="gridList">
+                            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+                            </GridListTile>
+                            {this.state.filteredRestaurants.map(restaurant => (
+                                <GridListTile key={restaurant.id}>
+                                    <img src={restaurant.img} alt={restaurant.name} />
+                                    <GridListTileBar
+                                        title={restaurant.name}
+                                        subtitle={<span>by: {restaurant.address}</span>}
+
+                                    />
+                                </GridListTile>
+                            ))}
+                        </GridList>
                     </div>
                 </div>
             </MuiThemeProvider>
