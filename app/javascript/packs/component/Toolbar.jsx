@@ -141,8 +141,7 @@ class Toolbar extends React.Component {
                         </div>
                     </div>
 
-                        <GridLayout filteredRestaurants = {this.state.filteredRestaurants}
-                    ></GridLayout>
+                        <GridLayout filteredRestaurants = {this.state.filteredRestaurants}></GridLayout>
 
                 </div>
             </MuiThemeProvider>

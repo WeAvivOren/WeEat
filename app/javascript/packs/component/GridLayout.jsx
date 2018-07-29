@@ -8,14 +8,22 @@ import RestaurantTile from "./RestraurantTile";
 
 const GridLayout = (props) => {
         return (
-            <MuiThemeProvider>
-                <div className="grid-root">
-                    <GridList cellHeight={180} className="gridList">
-                        <RestaurantTile filteredRestaurants = {this.props.filteredRestaurants} > </RestaurantTile>
+                    <div className="grid-root">
+                        <GridList cellHeight={180} className="gridList">
+                            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+                            </GridListTile>
+                            {props.filteredRestaurants.map(restaurant => (
+                                <GridListTile key={restaurant.id}>
+                                    <img src={restaurant.img} alt={restaurant.name} />
+                                    <GridListTileBar
+                                        title={restaurant.name}
+                                        subtitle={<span>by: {restaurant.address}</span>}
 
-                    </GridList>
-                </div>
-            </MuiThemeProvider>
+                                    />
+                                </GridListTile>
+                            ))}
+                        </GridList>
+                    </div>
         );
 }
 

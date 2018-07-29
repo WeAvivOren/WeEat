@@ -7,22 +7,13 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 const RestaurantTile = (props) => {
     return (
-        <MuiThemeProvider>
-            <div>
-                    <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                    </GridListTile>
-                    {props.filteredRestaurants.map(restaurant => (
-                        <GridListTile key={restaurant.id}>
-                            <img src={restaurant.img} alt={restaurant.name} />
-                            <GridListTileBar
-                                title={restaurant.name}
-                                subtitle={<span>by: {restaurant.address}</span>}
-
-                            />
-                        </GridListTile>
-                    ))}
-    </div>
-        </MuiThemeProvider>
+                <GridListTile key={props.restaurant.id}>
+                    <img src={props.restaurant.img} alt={props.restaurant.name} />
+                    <GridListTileBar
+                        title={props.restaurant.name}
+                        subtitle={<span>by: {props.restaurant.address}</span>}
+                    />
+                </GridListTile>
     );
 }
 
