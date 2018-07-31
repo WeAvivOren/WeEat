@@ -6,7 +6,6 @@ import Select from "@material-ui/core/es/Select/Select";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import Checkbox from '@material-ui/core/Checkbox';
 import GridLayout from "./GridLayout";
-import Comments from './Comments';
 
 
 class Toolbar extends React.Component {
@@ -15,7 +14,7 @@ class Toolbar extends React.Component {
         this.state = {
             cuisines: [],
             restaurants: [],
-            filteredRestaurants: [{"id": -1, "name": "empty", "address": "000"}],
+            filteredRestaurants: [{"id": -1, "name": "empty"}],
             has_10bis: false,
             selected_value: -1,
         };
@@ -43,7 +42,6 @@ class Toolbar extends React.Component {
     componentDidMount() {
         this.getCuisine();
         this.getRestaurants();
-
     }
 
 
@@ -70,24 +68,6 @@ class Toolbar extends React.Component {
             }).then(data => this.setState({cuisines: data}))
             .catch(error => this.setState({error, isLoading: false}));
     }
-
-
-    getReviews() {
-        this.state.filteredRestaurants.map(restaurant => {
-            let url = `/restaurants/${restaurant.id}/reviews.json`;
-            console.log("url  is = " + url);
-            fetch(url)
-                .then(response => {
-                    if (response.ok) {
-                        return response.json();
-                    } else {
-                        throw new Error('Something went wrong ...');
-                    }
-                }).then(data => this.setState({restaurant: data}))
-                .catch(error => this.setState({error, isLoading: false}));
-        })
-    }
-
 
     render() {
         const cuisines = ( //loads the cuisines list into map, then for each item
@@ -160,13 +140,8 @@ class Toolbar extends React.Component {
                         </div>
                     </div>
 
-                        <GridLayout filteredRestaurants = {this.state.filteredRestaurants}></GridLayout>
-                    {
-                        this.state.filteredRestaurants.map(restaurant => (
-                            <Comments key={restaurant.id} restaurant = {restaurant} >
-                            </Comments>
-                        ))
-                    }
+                        <GridLayout filteredRestaurants = {this.state.filteredRestaurants}/>
+
                 </div>
             </MuiThemeProvider>
         );
