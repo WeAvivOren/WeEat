@@ -8,17 +8,13 @@ import Comments from './Comments';
 const GridLayout = (props) => {
         return (
                     <div className="grid-root">
-                        <GridList cellHeight={180} className="gridList">
+                        <GridList cellHeight={'auto'} className="gridList">
                             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
                             </GridListTile>
                             {props.filteredRestaurants.map(restaurant => (
                                 <GridListTile key={restaurant.id}>
-                                    <img src={restaurant.img} alt={restaurant.name} />
-                                    <GridListTileBar
-                                        title={restaurant.name}
-                                        subtitle={<span>by: {restaurant.address}</span>}
-
-                                    />
+                                    <Comments key={restaurant.id} restaurant = {restaurant} >
+                                    </Comments>
                                 </GridListTile>
                             ))}
                         </GridList>

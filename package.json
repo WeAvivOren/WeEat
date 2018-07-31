@@ -2,7 +2,7 @@
   "name": "weeat",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.4.0",
+    "@material-ui/core": "^1.4.2",
     "@material-ui/icons": "latest",
     "@rails/webpacker": "3.5",
     "axios": "^0.18.0",

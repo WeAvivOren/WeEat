@@ -17,6 +17,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Review from "./Review";
+import AddReviewDialog from "./AddReviewDialog";
 
 const styles = theme => ({
     card: {
@@ -50,7 +51,12 @@ class Comments extends React.Component {
         super(props);
         this.state = {
             expanded: false,
-            reviews :[]
+            reviews :[],
+            open: false,
+            text: '',
+            name: 'name',
+            comment: 'comment',
+            restaurant: props.restaurant,
         };
     }
 
@@ -78,6 +84,38 @@ class Comments extends React.Component {
     }
 
 
+    handleClickOpen = () => {
+        this.setState({ open: true });
+    };
+
+    handleClose = () => {
+        this.setState({ open: false });
+    };
+
+    handleSubmit(){
+        let url = `/restaurants/${this.props .restaurant.id}/reviews.json`;
+        console.log("url  is = " + url);
+        fetch(url, {
+            method: 'post',
+            headers: {'Content-Type':'application/json'},
+            body: {
+                "review": {
+                    "name": this.state.name,
+                    "rating": 2,
+                    "comment": this.state.comment
+                }
+            }
+        });
+    };
+
+    handleChange = name => event => {
+        this.setState({
+            [name]: event.target.value,
+            [comment]: event.target.comment,
+        });
+    };
+
+
     render() {
         const { classes } = this.props;
         console.log("classes  is = " + classes);
@@ -99,7 +137,7 @@ class Comments extends React.Component {
                         }
                         action={
                             <IconButton>
-                                <MoreVertIcon />
+                                <MoreVertIcon onClick={this.handleClickOpen}/>
                             </IconButton>
                         }
                         title={this.props.restaurant.name}
@@ -143,6 +181,13 @@ class Comments extends React.Component {
                         </CardContent>
                     </Collapse>
                 </Card>
+
+                <AddReviewDialog
+                    open={this.state.open}
+                    onClose={this.handleClose}
+                    restaurant = {this.props.restaurant}
+                >
+                </AddReviewDialog>
             </div>
         );
     }

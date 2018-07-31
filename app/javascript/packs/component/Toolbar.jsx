@@ -159,14 +159,8 @@ class Toolbar extends React.Component {
                         </div>
                         </div>
                     </div>
-
+                    <div style={{margintop: '50px'}}>     </div>
                         <GridLayout filteredRestaurants = {this.state.filteredRestaurants}></GridLayout>
-                    {
-                        this.state.filteredRestaurants.map(restaurant => (
-                            <Comments key={restaurant.id} restaurant = {restaurant} >
-                            </Comments>
-                        ))
-                    }
                 </div>
             </MuiThemeProvider>
         );

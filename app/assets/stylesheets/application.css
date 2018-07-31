@@ -81,6 +81,9 @@ body {
     margin-left: 70px;
 }
 
+.margin-top {
+    margin-top: 70px;
+}
 .container {
     flex-direction: row ;
     display: flex;
@@ -96,8 +99,8 @@ body {
 }
 
 .gridList {
-    width: 500px;
-    height: 450px;
+    width: 700px;
+    height: 800px;
 }
 
 .gridIcon {
