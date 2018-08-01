@@ -4,6 +4,8 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import Comments from './Comments';
+import TouchRipple from 'material-ui/internal/TouchRipple';
+
 
 const GridLayout = (props) => {
         return (

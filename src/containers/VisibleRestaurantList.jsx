@@ -3,8 +3,7 @@ import { toggleTodo } from '../actions'
 import RestaurantList from '../components/RestaurantList'
 import { VisibilityFilters } from '../actions'
 
-const getVisibleRestaurant = (restaurant, filter) => { 
-  //change the state
+const getVisibleRestaurant = (restaurant, filter) => {
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
       return restaurant

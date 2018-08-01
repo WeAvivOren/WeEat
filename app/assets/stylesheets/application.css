@@ -119,3 +119,12 @@ body {
     position: relative;
     bottom: 2px;
 }
+
+
+
+.star-component{
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+

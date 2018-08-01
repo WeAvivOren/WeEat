@@ -52,12 +52,11 @@ class Comments extends React.Component {
         this.state = {
             expanded: false,
             reviews :[],
-            open: false,
             text: '',
-            name: 'name',
-            comment: 'comment',
             restaurant: props.restaurant,
         };
+        this.handleClickOpen = this.handleClickOpen.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
 
     handleExpandClick = event => {
@@ -92,28 +91,6 @@ class Comments extends React.Component {
         this.setState({ open: false });
     };
 
-    handleSubmit(){
-        let url = `/restaurants/${this.props .restaurant.id}/reviews.json`;
-        console.log("url  is = " + url);
-        fetch(url, {
-            method: 'post',
-            headers: {'Content-Type':'application/json'},
-            body: {
-                "review": {
-                    "name": this.state.name,
-                    "rating": 2,
-                    "comment": this.state.comment
-                }
-            }
-        });
-    };
-
-    handleChange = name => event => {
-        this.setState({
-            [name]: event.target.value,
-            [comment]: event.target.comment,
-        });
-    };
 
 
     render() {
@@ -128,6 +105,7 @@ class Comments extends React.Component {
 
         return (
             <div>
+       
                 <Card className={classes.card}>
                     <CardHeader
                         avatar={
@@ -185,9 +163,11 @@ class Comments extends React.Component {
                 <AddReviewDialog
                     open={this.state.open}
                     onClose={this.handleClose}
+                    close = {this.handleClose}
                     restaurant = {this.props.restaurant}
                 >
                 </AddReviewDialog>
+
             </div>
         );
     }
