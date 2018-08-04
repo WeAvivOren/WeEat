@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="982cd5cc-d364-493e-b831-ea5534deb76e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/packs/src/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/packs/src/reducers/visibilityFilter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/component/AddReviewDialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/component/AddReviewDialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/component/Comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/component/Comments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/component/GridLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/component/GridLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/restaurant.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/restaurant.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/hello_react.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/hello_react.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/VisibleRestaurantList.rxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/VisibleRestaurantList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/GridLayout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Map.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/RestraurantTile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/SimpleMap.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Toolbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/hello_react.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/VisibleRestaurantList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weeat.sublime-workspace" beforeDir="false" afterPath="$PROJECT_DIR$/weeat.sublime-workspace" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -44,100 +53,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Toolbar.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Toolbar.jsx">
+      <file leaf-file-name="hello_react.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/hello_react.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="162" column="31" selection-start-line="162" selection-start-column="31" selection-end-line="162" selection-end-column="31" />
+            <state relative-caret-position="585">
+              <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#227#252#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lib.es5.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <file leaf-file-name="Header.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Header.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="1736" column="8" selection-start-line="1736" selection-start-column="8" selection-end-line="1736" selection-end-column="8" />
+            <state relative-caret-position="375">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddReviewDialog.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/AddReviewDialog.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comments.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Comments.jsx">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GridLayout.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/GridLayout.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-              <folding>
-                <element signature="e#1#27#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/react-star-rating-component/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/reducers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="60">
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restaurant.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/restaurant.rb">
+      <file leaf-file-name="Toolbar.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Toolbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="382">
+              <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/actions/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="restaurantActions.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="visibilityFilter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/reducers/visibilityFilter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="VisibleRestaurantList.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/VisibleRestaurantList.jsx">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/containers/VisibleRestaurantList.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+            <state relative-caret-position="495">
+              <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -145,11 +146,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Header.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Header.jsx">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hello_react</find>
       <find>byebug</find>
       <find>new rest</find>
       <find>handle_unverified_request</find>
@@ -166,6 +171,9 @@
       <find>RestCard</find>
       <find>style</find>
       <find>textField</find>
+      <find>hello_react</find>
+      <find>entry</find>
+      <find>middleware</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,15 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/application_record.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20180709130839_create_restaurants.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20180709132600_create_cuisines.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20180709134245_create_reviews.rb" />
-        <option value="$PROJECT_DIR$/app/models/cuisine.rb" />
-        <option value="$PROJECT_DIR$/app/views/reviews/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/cuisines/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/cuisines/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/reviews/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reviews/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reviews/_review.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/cuisines/_form.html.erb" />
@@ -207,7 +206,6 @@
         <option value="$PROJECT_DIR$/app/javascript/packs/component/Header.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/component/SimpleMap.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/component/Map.jsx" />
-        <option value="$PROJECT_DIR$/app/javascript/packs/hello_react.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/component/RestraurantTile.jsx" />
         <option value="$PROJECT_DIR$/src/component/SimpleMap.jsx" />
         <option value="$PROJECT_DIR$/src/component/Toolbar.jsx" />
@@ -219,8 +217,22 @@
         <option value="$PROJECT_DIR$/app/models/restaurant.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/javascript/packs/component/AddReviewDialog.jsx" />
-        <option value="$PROJECT_DIR$/app/javascript/packs/component/Comments.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/component/GridLayout.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/component/Comments.jsx" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
+        <option value="$PROJECT_DIR$/app/src/store/index.js" />
+        <option value="$PROJECT_DIR$/app/src/component/hello_react.jsx" />
+        <option value="$PROJECT_DIR$/node_modules/google-map-react/webpack.config.base.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/component/hello_react.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/src/component/hello_react.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/src/reducers/visibilityFilter.js" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/src/actions/index.js" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/hello_react.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/src/index.js" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/src/containers/VisibleRestaurantList.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/src/component/Toolbar.jsx" />
       </list>
     </option>
   </component>
@@ -239,10 +251,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1689" />
-    <option name="y" value="275" />
-    <option name="width" value="1890" />
-    <option name="height" value="1027" />
+    <option name="x" value="1684" />
+    <option name="y" value="23" />
+    <option name="width" value="1187" />
+    <option name="height" value="1417" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -252,6 +264,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="weeat" type="52f3b0f7:RailsProjectNode" />
+              <item name="weeat" type="ca5d24b0:RailsModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -268,33 +292,6 @@
               <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
               <item name="weeat" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -310,96 +307,52 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
               <item name="packs" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="webpack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
               <item name="weeat" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="packs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
               <item name="weeat" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="packs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
               <item name="weeat" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="packs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
               <item name="weeat" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="packs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weeat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weeat" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="config/application.rb&#9;FILE&#9;file:///Users/aviv.oren/weeat/config/application.rb&#10;package.json&#9;FILE&#9;file:///Users/aviv.oren/weeat/package.json&#10;babe&#9;FILE&#9;file:///Users/aviv.oren/weeat/.babelrc&#10;webp&#9;FILE&#9;file:///Users/aviv.oren/weeat/config/webpack&#10;app&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/views/layouts/application.html.erb&#10;ap&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/controllers/application_controller.rb&#10;appl&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/javascript/packs/application.js&#10;jsx&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/javascript/packs/hello_react.jsx&#10;index&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/views/restaurants/index.html.erb&#10;rou&#9;FILE&#9;file:///Users/aviv.oren/weeat/config/routes.rb&#10;hello&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/javascript/packs/hello_react.jsx&#10;יקךךם&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/javascript/packs/hello_react.jsx" />
+    <property name="SearchEverywhereHistoryKey" value="webpack.con&#9;FILE&#9;file:///Users/aviv.oren/weeat/node_modules/google-map-react/webpack.config.dev.js&#10;index.js&#9;FILE&#9;file:///Users/aviv.oren/weeat/src/actions/index.js&#10;index.&#9;FILE&#9;file:///Users/aviv.oren/weeat/node_modules/react-star-rating-component/index.js&#10;config/application.rb&#9;FILE&#9;file:///Users/aviv.oren/weeat/config/application.rb&#10;package.json&#9;FILE&#9;file:///Users/aviv.oren/weeat/package.json&#10;babe&#9;FILE&#9;file:///Users/aviv.oren/weeat/.babelrc&#10;webp&#9;FILE&#9;file:///Users/aviv.oren/weeat/config/webpack&#10;app&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/views/layouts/application.html.erb&#10;ap&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/controllers/application_controller.rb&#10;appl&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/javascript/packs/application.js&#10;jsx&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/javascript/packs/hello_react.jsx&#10;index&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/views/restaurants/index.html.erb&#10;rou&#9;FILE&#9;file:///Users/aviv.oren/weeat/config/routes.rb&#10;hello&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/javascript/packs/hello_react.jsx&#10;יקךךם&#9;FILE&#9;file:///Users/aviv.oren/weeat/app/javascript/packs/hello_react.jsx" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -408,16 +361,16 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/app/javascript/packs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/component" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/app/javascript/packs/component" />
       <recent name="$PROJECT_DIR$/app/assets/images" />
       <recent name="$PROJECT_DIR$/app/views/component" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/app/javascript/packs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -552,7 +505,10 @@
       <workItem from="1532875261384" duration="147000" />
       <workItem from="1532876086477" duration="1413000" />
       <workItem from="1532878027906" duration="2617000" />
-      <workItem from="1532962862128" duration="25066000" />
+      <workItem from="1532962862128" duration="25946000" />
+      <workItem from="1533122926764" duration="3325000" />
+      <workItem from="1533126932156" duration="5001000" />
+      <workItem from="1533207802390" duration="983000" />
     </task>
     <servers />
   </component>
@@ -565,26 +521,25 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102694000" />
+    <option name="totallyTimeSpent" value="112883000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1689" y="275" width="1890" height="1027" extended-state="0" />
+    <frame x="1684" y="23" width="1187" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26550218" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32971016" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34871244" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29863814" />
-      <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13744588" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34871244" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32971016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29863814" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -592,6 +547,7 @@
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32971016" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,159 +558,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack/production.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="46" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/webpack">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack/test.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/Checkbox/Checkbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="147" column="2" selection-start-line="147" selection-start-column="2" selection-end-line="147" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/cuisines.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/AppBarHeader" />
-    <entry file="file://$PROJECT_DIR$/config/webpack/development.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack/environment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/packs/component/AppBarHeader-38a50f9cc8eb0bbb412a4b73c600036d.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-start-column="2" selection-end-line="21" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180709132600_create_cuisines.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180709130839_create_restaurants.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/SimpleMap" />
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180726114017_add_img_to_restaurants.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/MenuAppBar.jsx" />
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Map.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-google-maps/types/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="221" column="42" selection-start-line="221" selection-start-column="24" selection-end-line="221" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Map.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/RestraurantTile.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/packs/hello_react-336a177584cb58a75728.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="38932" column="22" selection-start-line="38932" selection-start-column="22" selection-end-line="38932" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/hello_react.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/hello_react.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/restaurants.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -765,26 +572,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/SimpleMap.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/GridLayout.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/SimpleMap.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/component/GridLayout.jsx" />
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/SimpleMap.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -792,45 +581,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Toolbar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="13" column="22" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/RestraurantTile.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Toolbar.jsx" />
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Review.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/Dialog/Dialog.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -839,32 +599,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/VisibleRestaurantList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/VisibleRestaurantList.jsx" />
     <entry file="file://$PROJECT_DIR$/app/models/restaurant.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -879,9 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-star-rating-component/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/packs/component/Comments-4f3315a4f7f176d0f723.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -891,57 +623,207 @@
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
+        <state relative-caret-position="25845">
           <caret line="1736" column="8" selection-start-line="1736" selection-start-column="8" selection-end-line="1736" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
+        <state relative-caret-position="1845">
           <caret line="123" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/AddReviewDialog.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="285">
           <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Toolbar.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="162" column="31" selection-start-line="162" selection-start-column="31" selection-end-line="162" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Comments.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1380">
+          <caret line="100" column="61" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/GridLayout.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        <state relative-caret-position="60">
+          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js" />
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Comments.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack/environment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack/development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/credentials.yml.enc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/RestraurantTile.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/restaurants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/store/index.js" />
+    <entry file="file://$PROJECT_DIR$/app/src/component/hello_react.jsx" />
+    <entry file="file://$PROJECT_DIR$/node_modules/react-star-rating-component/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/google-map-react/webpack.config.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/google-map-react/webpack.config.prod.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/google-map-react/webpack.config.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/component/hello_react.jsx" />
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/hello_react.jsx" />
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/RestraurantTile.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/reducers/visibilityFilter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding>
-            <element signature="e#1#27#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/hello_react.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#227#252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/containers/VisibleRestaurantList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Toolbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
