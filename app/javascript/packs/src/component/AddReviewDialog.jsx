@@ -96,11 +96,12 @@ class AddReviewDialog extends React.Component {
                             margin="normal"
                         />
                         <div>
-                                <span style={{
-                                    color: 'rgba(0, 0, 0, 0.3)',
-                                    position: "relative",
-                                    bottom: "18px",
-                                }}>Rating</span>
+                            <span style={{
+                                color: 'rgba(0, 0, 0, 0.3)',
+                                position: "relative",
+                                bottom: "18px",
+                            }}
+                            >Rating</span>
                             <StarRating className="star-component"
                                         name="rating"
                                         starCount={5}

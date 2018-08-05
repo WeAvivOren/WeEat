@@ -77,6 +77,7 @@ class Toolbar extends React.Component {
 
 
     render() {
+        
         const cuisines = ( //loads the cuisines list into map, then for each item
             this.state.cuisines.map((cuisine) => {
                 return <MenuItem value={cuisine.id} key={cuisine.id} id={cuisine.id}>{cuisine.name}</MenuItem>

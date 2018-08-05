@@ -11,7 +11,6 @@ export const VisibilityFilters = {
 }
 
 
-
 export const setVisibilityFilter = restaurants => ({
     type: 'SET_VISIBILITY_FILTER',
     restaurants

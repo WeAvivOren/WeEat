@@ -17,23 +17,4 @@ const getVisibleRestaurant = (restaurant, filter) => {
   }
 }
 
-const mapStateToProps = state => ({
-  restaurant: getVisibleRestaurant(state.restaurant, state.visibilityFilter)
-})
 
-
-export const getRestaurants() {
-    fetch('/restaurants.json')
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Something went wrong ...');
-            }
-        }).then(data => dispatch({restaurant:, filteredRestaurants: data}))
-        .catch(error => this.setState({error, isLoading: false}));
-}
-
-export default connect(
-  mapStateToProps, getRestaurants
-)(RestaurantList)

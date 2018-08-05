@@ -16,7 +16,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import RateReview from '@material-ui/icons/RateReview';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Review from "./Review";
 import AddReviewDialog from "./AddReviewDialog";
 
@@ -106,7 +105,6 @@ class Comments extends React.Component {
 
         return (
             <div>
-       
                 <Card className={classes.card}>
                     <CardHeader
                         avatar={
@@ -114,7 +112,7 @@ class Comments extends React.Component {
                                {this.props.restaurant.name[0]}
                             </Avatar>
                         }
-                    
+
                         title={this.props.restaurant.name}
                         subheader={this.props.restaurant.address}
                     />
