@@ -34,9 +34,14 @@ class Toolbar extends React.Component {
     };
 
     onTenBisChecked = event => {
-        this.setState({has_10bis: !this.state.has_10bis});
-
-        const filteredRestaurants = this.props.restaurants.filter(restaurant => restaurant.accepts_10bis === true);
+        const {has_10bis} = this.state;
+        this.setState({has_10bis: !has_10bis});
+        let filteredRestaurants = {};
+        if (has_10bis) {
+             filteredRestaurants = this.props.restaurants.filter(restaurant => restaurant.accepts_10bis === true);
+        } else {
+             filteredRestaurants = this.props.restaurants.filter(restaurant => restaurant.accepts_10bis === false);
+        }
         console.log(filteredRestaurants);
         this.setState({filteredRestaurants: filteredRestaurants});
     };
@@ -44,7 +49,6 @@ class Toolbar extends React.Component {
     componentDidMount() {
         this.getCuisine();
         this.props.actions.loadRestaurants();
-
         // this.getRestaurants();
     }
 
@@ -77,7 +81,6 @@ class Toolbar extends React.Component {
 
 
     render() {
-        
         const cuisines = ( //loads the cuisines list into map, then for each item
             this.state.cuisines.map((cuisine) => {
                 return <MenuItem value={cuisine.id} key={cuisine.id} id={cuisine.id}>{cuisine.name}</MenuItem>
@@ -115,27 +118,10 @@ class Toolbar extends React.Component {
                         </div>
                          </div>
 
-                            <div style={{marginLeft: '50px'}}>
-                            <FormControl className="cusine-formControl">
-                                <InputLabel htmlFor="restaurants-list"  width="200">Restaurant</InputLabel>
-                                <Select
-                                    value={this.state.selected_value}
-                                    onChange={this.onCuisineSelected}
-                                    className="restaurants-search-selected"
-                                    fullWidth={true}
-
-                                >
-                                    <MenuItem value="-1"  width="200">
-                                        <em>Restaurant</em>
-                                    </MenuItem>
-                                    {filteredRestaurants} /* list of menu items */
-                                </Select>
-                            </FormControl>
-                        </div>
 
                         <div className="three">
                         <div style={{marginLeft: '50px'}}>
-
+                            <h style={{color: 'black'}}> Accepts 10Bis</h>
                             <Checkbox
                                 className="tenBis-filter"
                                 label="Accepts 10Bis"

@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="982cd5cc-d364-493e-b831-ea5534deb76e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/src/component/AddReviewDialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/src/component/AddReviewDialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/src/component/Comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/src/component/Comments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/src/component/Map.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/src/component/RestraurantTile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/hello_react.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/hello_react.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/packs/src/component/Toolbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/src/component/Toolbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/src/containers/VisibleRestaurantList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/src/containers/VisibleRestaurantList.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -46,10 +41,11 @@
       <file leaf-file-name="hello_react.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/javascript/packs/hello_react.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+            <state relative-caret-position="691">
+              <caret line="54" selection-start-line="45" selection-start-column="45" selection-end-line="54" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#228#253#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +54,8 @@
       <file leaf-file-name="Toolbar.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Toolbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="78" column="14" lean-forward="true" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+            <state relative-caret-position="571">
+              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -100,8 +96,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="618" column="63" selection-start-line="618" selection-start-column="63" selection-end-line="618" selection-end-column="63" />
+            <state relative-caret-position="528">
+              <caret line="624" column="63" selection-start-line="624" selection-start-column="63" selection-end-line="624" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -121,8 +117,8 @@
       <file leaf-file-name="restaurantActions.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="225">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding>
                 <element signature="e#137#214#0" expanded="true" />
               </folding>
@@ -130,23 +126,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yarn.lock" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yarn.lock">
+      <file leaf-file-name="Header.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Header.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2923">
-              <caret line="1912" column="35" selection-start-line="1912" selection-start-column="35" selection-end-line="1912" selection-end-column="35" />
+            <state relative-caret-position="210">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+              <folding>
+                <element signature="e#1#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Header.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Header.jsx">
+      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding>
-                <element signature="e#1#27#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="405">
+              <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -179,6 +175,9 @@
       <find>reviews</find>
       <find>comments</find>
       <find>comm</find>
+      <find>&lt;Toolbar</find>
+      <find>loadRestaurants</find>
+      <find>restaurants</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,7 +214,6 @@
         <option value="$PROJECT_DIR$/app/javascript/packs/component/Toolbar.jsx" />
         <option value="$PROJECT_DIR$/src/containers/VisibleRestaurantList.rxml" />
         <option value="$PROJECT_DIR$/app/models/restaurant.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/javascript/packs/component/AddReviewDialog.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/component/GridLayout.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/component/Comments.jsx" />
@@ -230,13 +228,14 @@
         <option value="$PROJECT_DIR$/app/javascript/packs/src/index.js" />
         <option value="$PROJECT_DIR$/app/javascript/packs/src/reducers/visibilityFilter.js" />
         <option value="$PROJECT_DIR$/app/javascript/packs/src/actions/index.js" />
-        <option value="$PROJECT_DIR$/app/javascript/packs/hello_react.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/src/component/AddReviewDialog.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/src/component/Comments.jsx" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/app/javascript/packs/src/containers/VisibleRestaurantList.jsx" />
         <option value="$PROJECT_DIR$/app/javascript/packs/src/component/RestaurantTile.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/packs/hello_react.jsx" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/javascript/packs/src/component/Toolbar.jsx" />
       </list>
     </option>
@@ -515,7 +514,7 @@
       <workItem from="1533126932156" duration="5001000" />
       <workItem from="1533207802390" duration="983000" />
       <workItem from="1533453170314" duration="9980000" />
-      <workItem from="1533476840715" duration="1623000" />
+      <workItem from="1533476840715" duration="4556000" />
     </task>
     <servers />
   </component>
@@ -528,7 +527,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124486000" />
+    <option name="totallyTimeSpent" value="127419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="87" width="1647" height="1102" extended-state="0" />
@@ -667,13 +666,6 @@
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/hello_react.jsx" />
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Header.jsx" />
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/component/Toolbar.jsx" />
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -762,26 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/hello_react.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yarn.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2923">
@@ -805,18 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="618" column="63" selection-start-line="618" selection-start-column="63" selection-end-line="618" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#137#214#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="528">
+          <caret line="624" column="63" selection-start-line="624" selection-start-column="63" selection-end-line="624" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -840,10 +802,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/hello_react.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="54" selection-start-line="45" selection-start-column="45" selection-end-line="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#228#253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/actions/restaurantActions.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#137#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/src/component/Toolbar.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="78" column="14" lean-forward="true" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+        <state relative-caret-position="571">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
