@@ -6,28 +6,29 @@ import Select from "@material-ui/core/es/Select/Select";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import Checkbox from '@material-ui/core/Checkbox';
 import GridLayout from "./GridLayout";
-import * as Actions from '../actions';
-
+import {bindActionCreators} from "redux";
+import * as Actions from "../actions";
+import {connect} from 'react-redux';
 
 class Toolbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             cuisines: [],
-            restaurants: [],
             filteredRestaurants: [{"id": -1, "name": "empty"}],
             has_10bis: false,
             selected_value: -1,
         };
         this.onTenBisChecked = this.onTenBisChecked.bind(this);
         this.onCuisineSelected = this.onCuisineSelected.bind(this);
+
     }
 
     onCuisineSelected = event => {
         var cuisineId = event.target.value;
         console.log("cuisine id is = " + cuisineId);
         this.setState({selected_value: cuisineId});
-        const filteredRestaurants = this.state.restaurants.filter(restaurant => restaurant.cuisine_id === cuisineId);
+        const filteredRestaurants = this.props.restaurants.filter(restaurant => restaurant.cuisine_id === cuisineId);
         console.log(filteredRestaurants);
         this.setState({filteredRestaurants: filteredRestaurants});
     };
@@ -35,7 +36,7 @@ class Toolbar extends React.Component {
     onTenBisChecked = event => {
         this.setState({has_10bis: !this.state.has_10bis});
 
-        const filteredRestaurants = this.state.restaurants.filter(restaurant => restaurant.accepts_10bis === true);
+        const filteredRestaurants = this.props.restaurants.filter(restaurant => restaurant.accepts_10bis === true);
         console.log(filteredRestaurants);
         this.setState({filteredRestaurants: filteredRestaurants});
     };
@@ -43,8 +44,10 @@ class Toolbar extends React.Component {
     componentDidMount() {
         this.getCuisine();
         this.props.actions.loadRestaurants();
-        this.getRestaurants();
+
+        // this.getRestaurants();
     }
+
 
 
     getRestaurants() {
@@ -70,6 +73,8 @@ class Toolbar extends React.Component {
             }).then(data => this.setState({cuisines: data}))
             .catch(error => this.setState({error, isLoading: false}));
     }
+
+
 
     render() {
         const cuisines = ( //loads the cuisines list into map, then for each item
@@ -141,9 +146,8 @@ class Toolbar extends React.Component {
                         </div>
                         </div>
                     </div>
-
-                        <GridLayout filteredRestaurants = {this.state.filteredRestaurants}/>
-
+                    <div style={{margintop: '50px'}}>     </div>
+                        <GridLayout filteredRestaurants = {this.state.filteredRestaurants}></GridLayout>
                 </div>
             </MuiThemeProvider>
         );
@@ -151,5 +155,12 @@ class Toolbar extends React.Component {
 
 }
 
+const mapStateToProps = (state) => ({
+    restaurants: state.visibilityFilter.restaurants,
+});
 
-export default Toolbar;
+const mapDispatchToProps = (dispatch) => ({
+    actions: bindActionCreators(Actions, dispatch),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Toolbar);

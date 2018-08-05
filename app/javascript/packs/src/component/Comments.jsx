@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
+import RateReview from '@material-ui/icons/RateReview';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Review from "./Review";
@@ -41,7 +42,7 @@ const styles = theme => ({
         transform: 'rotate(180deg)',
     },
     avatar: {
-        backgroundColor: red[500],
+        backgroundColor: red[100],
     },
 });
 
@@ -110,14 +111,10 @@ class Comments extends React.Component {
                     <CardHeader
                         avatar={
                             <Avatar aria-label="Recipe" className={classes.avatar}>
-                                R
+                               {this.props.restaurant.name[0]}
                             </Avatar>
                         }
-                        action={
-                            <IconButton>
-                                <MoreVertIcon onClick={this.handleClickOpen}/>
-                            </IconButton>
-                        }
+                    
                         title={this.props.restaurant.name}
                         subheader={this.props.restaurant.address}
                     />
@@ -138,6 +135,9 @@ class Comments extends React.Component {
                         </IconButton>
                         <IconButton aria-label="Share">
                             <ShareIcon />
+                        </IconButton>
+                        <IconButton aria-label="Rate" onClick={this.handleClickOpen}>
+                            <RateReview/>
                         </IconButton>
                         <IconButton
                             className={classnames(classes.expand, {
