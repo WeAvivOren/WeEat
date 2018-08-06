@@ -13,7 +13,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import RateReview from '@material-ui/icons/RateReview';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Review from "./Review";
@@ -41,7 +40,7 @@ const styles = theme => ({
         transform: 'rotate(180deg)',
     },
     avatar: {
-        backgroundColor: red[100],
+        backgroundColor: "#F7CFD3",
     },
 });
 
@@ -142,7 +141,7 @@ class Comments extends React.Component {
                         <IconButton aria-label="Rate" onClick={this.handleClickOpen}>
                             <RateReview/>
                         </IconButton>
-                        {this.props.restaurant.accepts_10bis ?  <img src={'/images/10bis-logo.png'} width="30" height="15" /> : null}
+                        {this.props.restaurant.accepts_10bis ?  <img src={'/images/10bis-logo.png'} width="30" height="15" style={{marginLeft : 10}} /> : null}
                         <IconButton
                             className={classnames(classes.expand, {
                                 [classes.expandOpen]: this.state.expanded,

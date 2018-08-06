@@ -29,13 +29,6 @@ class AddReviewDialog extends React.Component {
         this.setState({rating: nextValue});
     };
 
-    handleClickOpen = () => {
-        this.setState({open: true, restaurant: this.restaurant});
-    };
-
-    handleClose = () => {
-        this.setState({open: false});
-    };
 
     handleSubmit(restaurant) {
         let url = `/restaurants/${restaurant.id}/reviews.json`;
@@ -76,9 +69,9 @@ class AddReviewDialog extends React.Component {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
-                <DialogTitle id="alert-dialog-title">{"Add review"}</DialogTitle>
+                <DialogTitle id="alert-dialog-title">{"Add review for "} {this.state.restaurant.name}</DialogTitle>
                 <DialogContent>
-                    <form onSubmit={() => this.handleSubmit(restaurant)}>
+                    <form className={"add-review-root"} onSubmit={() => this.handleSubmit(restaurant)}>
                         <TextField
                             id="name"
                             label="Name"
@@ -100,8 +93,7 @@ class AddReviewDialog extends React.Component {
                                 color: 'rgba(0, 0, 0, 0.3)',
                                 position: "relative",
                                 bottom: "18px",
-                            }}
-                            >Rating</span>
+                            }}>Rating</span>
                             <StarRating className="star-component"
                                         name="rating"
                                         starCount={5}

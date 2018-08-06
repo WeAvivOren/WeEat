@@ -64,6 +64,11 @@ body {
     flexWrap: wrap;
 }
 
+.add-review-root {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .cusine-formControl {
     minWidth: 300;
     margin: 20px;
@@ -120,11 +125,9 @@ body {
     bottom: 2px;
 }
 
-
-
 .star-component{
     font-size: 20px;
-    margin-left: 50px;
-    margin-top: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 

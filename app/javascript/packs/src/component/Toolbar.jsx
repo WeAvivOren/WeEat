@@ -9,6 +9,9 @@ import GridLayout from "./GridLayout";
 import {bindActionCreators} from "redux";
 import * as Actions from "../actions";
 import {connect} from 'react-redux';
+import StarRating from 'react-star-rating-component';
+import IconButton from "@material-ui/core/es/IconButton/IconButton";
+import RateReview from "@material-ui/icons/es/Cancel";
 
 class Toolbar extends React.Component {
     constructor(props) {
@@ -18,6 +21,7 @@ class Toolbar extends React.Component {
             filteredRestaurants: [{"id": -1, "name": "empty"}],
             has_10bis: false,
             selected_value: -1,
+            rating: 0,
         };
         this.onTenBisChecked = this.onTenBisChecked.bind(this);
         this.onCuisineSelected = this.onCuisineSelected.bind(this);
@@ -29,11 +33,10 @@ class Toolbar extends React.Component {
         console.log("cuisine id is = " + cuisineId);
         this.setState({selected_value: cuisineId});
         const filteredRestaurants = this.props.restaurants.filter(restaurant => restaurant.cuisine_id === cuisineId);
-        console.log(filteredRestaurants);
         this.setState({filteredRestaurants: filteredRestaurants});
     };
 
-    onTenBisChecked = event => {
+    onTenBisChecked = () => {
         const {has_10bis} = this.state;
         this.setState({has_10bis: !has_10bis});
         let filteredRestaurants = {};
@@ -42,9 +45,21 @@ class Toolbar extends React.Component {
         } else {
              filteredRestaurants = this.props.restaurants.filter(restaurant => restaurant.accepts_10bis === false);
         }
-        console.log(filteredRestaurants);
         this.setState({filteredRestaurants: filteredRestaurants});
     };
+
+    onStarClick = (nextValue) => {
+        this.setState({rating: nextValue});
+        const filteredRestaurants = this.props.restaurants.filter(restaurant => restaurant.rating >= nextValue);
+        this.setState({filteredRestaurants: filteredRestaurants});
+    };
+
+    handleClickClearAll = () =>{
+        this.setState({has_10bis: false});
+        this.setState({selected_value: -1});
+        this.setState({rating: 0});
+        this.setState({filteredRestaurants: this.props.restaurants});
+    }
 
     componentDidMount() {
         this.getCuisine();
@@ -59,17 +74,6 @@ class Toolbar extends React.Component {
         else return null;
     }
 
-    getRestaurants() {
-        fetch('/restaurants.json')
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('Something went wrong ...');
-                }
-            }).then(data => this.setState({restaurants: data, filteredRestaurants: data}))
-            .catch(error => this.setState({error, isLoading: false}));
-    }
 
     getCuisine() {
         fetch('/cuisines.json')
@@ -89,13 +93,6 @@ class Toolbar extends React.Component {
         const cuisines = ( //loads the cuisines list into map, then for each item
             this.state.cuisines.map((cuisine) => {
                 return <MenuItem value={cuisine.id} key={cuisine.id} id={cuisine.id}>{cuisine.name}</MenuItem>
-            })
-        );
-
-        const filteredRestaurants = ( //loads the filteredRestaurants list into map, then for each item
-            this.state.filteredRestaurants.map((restaurant) => {
-                return <MenuItem value={restaurant.id} key={restaurant.id}
-                                 id={restaurant.id}>{restaurant.name}</MenuItem>
             })
         );
 
@@ -122,8 +119,6 @@ class Toolbar extends React.Component {
                             </FormControl>
                         </div>
                          </div>
-
-
                         <div className="three">
                         <div style={{marginLeft: '50px'}}>
                             <h style={{color: 'black'}}> Accepts 10Bis</h>
@@ -137,6 +132,30 @@ class Toolbar extends React.Component {
                             />
                         </div>
                         </div>
+
+                        <div className="three">
+
+                                <div>
+                                    <StarRating className="star-component"
+                                                name="rating"
+                                                starCount={5}
+                                                value={this.state.rating}
+                                                starColor={"#F7CFD3"}
+                                                onStarClick={this.onStarClick}
+                                                emptyStarColor="rgba(0, 0, 0, .54)"
+                                    />
+
+                            </div>
+                        </div>
+
+                        <div className="three">
+                            <div style={{marginLeft: '50px'}}>
+                                <IconButton aria-label="Rate" onClick={this.handleClickClearAll}>
+                                    <RateReview/>
+                                </IconButton>
+                            </div>
+                        </div>
+
                     </div>
                     <div style={{margintop: '50px'}}>     </div>
                         <GridLayout filteredRestaurants = {this.state.filteredRestaurants}></GridLayout>
