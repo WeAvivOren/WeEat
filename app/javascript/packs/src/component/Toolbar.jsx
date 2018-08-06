@@ -49,10 +49,15 @@ class Toolbar extends React.Component {
     componentDidMount() {
         this.getCuisine();
         this.props.actions.loadRestaurants();
-        // this.getRestaurants();
     }
 
 
+    static getDerivedStateFromProps(nextProps, prevState){
+        if ( nextProps.restaurants  && nextProps.restaurants!==prevState.restaurants) {
+            return {restaurants: nextProps.restaurants, filteredRestaurants: nextProps.restaurants};
+        }
+        else return null;
+    }
 
     getRestaurants() {
         fetch('/restaurants.json')

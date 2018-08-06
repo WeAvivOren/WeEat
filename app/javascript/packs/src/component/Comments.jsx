@@ -54,6 +54,7 @@ class Comments extends React.Component {
             reviews :[],
             text: '',
             restaurant: props.restaurant,
+            love : false,
         };
         this.handleClickOpen = this.handleClickOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
@@ -91,6 +92,11 @@ class Comments extends React.Component {
         this.setState({ open: false });
     };
 
+    handleLoveClicked = () => {
+        const love = this.state.love;
+        this.setState({ love: !love });
+    }
+
 
 
     render() {
@@ -102,6 +108,8 @@ class Comments extends React.Component {
                 return <Review  key={review.id} review = {review} />
             })
         );
+
+        const colorLove = this.state.love ? "secondary" : "default";
 
         return (
             <div>
@@ -128,15 +136,13 @@ class Comments extends React.Component {
                         </Typography>
                     </CardContent>
                     <CardActions className={classes.actions} disableActionSpacing>
-                        <IconButton aria-label="Add to favorites">
-                            <FavoriteIcon />
-                        </IconButton>
-                        <IconButton aria-label="Share">
-                            <ShareIcon />
+                        <IconButton aria-label="Add to favorites" onClick={this.handleLoveClicked} color={colorLove}>
+                                <FavoriteIcon/>
                         </IconButton>
                         <IconButton aria-label="Rate" onClick={this.handleClickOpen}>
                             <RateReview/>
                         </IconButton>
+                        {this.props.restaurant.accepts_10bis ?  <img src={'/images/10bis-logo.png'} width="30" height="15" /> : null}
                         <IconButton
                             className={classnames(classes.expand, {
                                 [classes.expandOpen]: this.state.expanded,
