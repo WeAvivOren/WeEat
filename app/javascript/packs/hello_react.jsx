@@ -45,8 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <Header>
                     <Toolbar restaurants={[]}/>
                     <div  style={{ marginTop: '10px' }}></div>
-                    <SimpleMap>
-                    </SimpleMap>
                 </Header>
             </Provider>
         </div>,

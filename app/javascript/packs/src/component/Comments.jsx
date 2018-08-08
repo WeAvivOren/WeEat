@@ -17,6 +17,7 @@ import RateReview from '@material-ui/icons/RateReview';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Review from "./Review";
 import AddReviewDialog from "./AddReviewDialog";
+import StarRating from 'react-star-rating-component';
 
 const styles = theme => ({
     card: {
@@ -118,6 +119,19 @@ class Comments extends React.Component {
                             <Avatar aria-label="Recipe" className={classes.avatar}>
                                {this.props.restaurant.name[0]}
                             </Avatar>
+                        }
+
+                        action={
+                            <div>
+                                <StarRating className="small-star-component"
+                                            name="rating"
+                                            starCount={5}
+                                            value={this.props.restaurant.rating}
+                                            starColor={"#F7CFD3"}
+                                            emptyStarColor="rgba(0, 0, 0, .54)"
+                                />
+
+                            </div>
                         }
 
                         title={this.props.restaurant.name}

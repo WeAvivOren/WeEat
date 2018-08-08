@@ -12,6 +12,7 @@ import {connect} from 'react-redux';
 import StarRating from 'react-star-rating-component';
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import RateReview from "@material-ui/icons/es/Cancel";
+import Map from './Map';
 
 class Toolbar extends React.Component {
     constructor(props) {
@@ -20,8 +21,14 @@ class Toolbar extends React.Component {
             cuisines: [],
             filteredRestaurants: [{"id": -1, "name": "empty"}],
             has_10bis: false,
-            selected_value: -1,
+            selected_value: "-1",
             rating: 0,
+                 center: {
+            lat: 32.0768528,
+            lng:34.790437
+         },
+            selected: {},
+
         };
         this.onTenBisChecked = this.onTenBisChecked.bind(this);
         this.onCuisineSelected = this.onCuisineSelected.bind(this);
@@ -56,7 +63,7 @@ class Toolbar extends React.Component {
 
     handleClickClearAll = () =>{
         this.setState({has_10bis: false});
-        this.setState({selected_value: -1});
+        this.setState({selected_value: "-1"});
         this.setState({rating: 0});
         this.setState({filteredRestaurants: this.props.restaurants});
     }
@@ -69,7 +76,7 @@ class Toolbar extends React.Component {
 
     static getDerivedStateFromProps(nextProps, prevState){
         if ( nextProps.restaurants  && nextProps.restaurants!==prevState.restaurants) {
-            return {restaurants: nextProps.restaurants, filteredRestaurants: nextProps.restaurants};
+            return {restaurants: nextProps.restaurants, filteredRestaurants: nextProps.restaurants, selected: nextProps.restaurants[0]};
         }
         else return null;
     }
@@ -87,6 +94,14 @@ class Toolbar extends React.Component {
             .catch(error => this.setState({error, isLoading: false}));
     }
 
+    setCenterMap = (restaurant) => {
+        const center = {lat: restaurant.lat, lng: restaurant.lng};
+        this._mapComponent.panTo(center);
+    };
+
+    handleMapLoad = (map) => {
+      //  this._mapComponent = map;
+    };
 
 
     render() {
@@ -159,6 +174,14 @@ class Toolbar extends React.Component {
                     </div>
                     <div style={{margintop: '50px'}}>     </div>
                         <GridLayout filteredRestaurants = {this.state.filteredRestaurants}></GridLayout>
+
+                    <Map restaurants={this.state.filteredRestaurants}
+                         loadingElement={<div style={{ height: `100%` }} />}
+                         containerElement={<div style={{ height: 'calc(100vh - 400px)' }} />}
+                         mapElement={<div style={{ height: `100%` }} />}
+                         selected={this.state.selected}
+                         onMapLoad={this.handleMapLoad}
+                         center={this.state.center}/>
                 </div>
             </MuiThemeProvider>
         );
